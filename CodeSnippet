@@ -1,0 +1,10 @@
+
+<cfoutput>
+<cfset theString = "Quick brown fox jumps over the lazy dog">
+
+<cfset trimString = #LEFT(theString,19)#>
+
+<cfset myBreak = 19 - #FINDONEOF(" ",REVERSE(trimString))#>
+
+#LEFT(theString,myBreak)#
+</cfoutput>
